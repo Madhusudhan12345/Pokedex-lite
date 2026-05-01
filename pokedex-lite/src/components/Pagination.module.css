@@ -1,0 +1,36 @@
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 6px;
+  margin-top: 32px;
+  flex-wrap: wrap;
+  padding-bottom: 32px;
+}
+
+.btn {
+  background: var(--dark);
+  border: 3px solid var(--blue-light);
+  color: var(--cream);
+  padding: 8px 12px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 8px;
+  cursor: pointer;
+  transition: background 0.1s, transform 0.1s;
+  min-width: 36px;
+}
+
+.btn:hover:not(:disabled) {
+  background: var(--blue);
+  transform: translateY(-2px);
+}
+
+.btn:disabled {
+  opacity: 0.35;
+  cursor: default;
+}
+
+.active {
+  background: var(--red) !important;
+  border-color: var(--red-dark);
+}

@@ -1,0 +1,62 @@
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.statsBar {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 16px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  color: var(--cream-dark);
+  flex-wrap: wrap;
+}
+
+.highlight {
+  color: var(--yellow);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.empty {
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--cream-dark);
+}
+
+.emptyIcon {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 48px;
+  color: var(--blue-light);
+  opacity: 0.4;
+  margin-bottom: 20px;
+}
+
+.emptyTitle {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 12px;
+  margin-bottom: 12px;
+  color: var(--cream);
+}
+
+.emptyMsg {
+  font-family: 'VT323', monospace;
+  font-size: 20px;
+  color: var(--gray);
+}
+
+@media (max-width: 600px) {
+  .main { padding: 12px; }
+  .grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+  .statsBar { font-size: 6px; gap: 10px; }
+}

@@ -1,0 +1,179 @@
+.overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: fadeIn 0.15s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.modal {
+  background: var(--cream);
+  border: 4px solid var(--dark);
+  box-shadow: 8px 8px 0 var(--dark);
+  max-width: 480px;
+  width: 100%;
+  max-height: 90vh;
+  overflow-y: auto;
+  animation: slideUp 0.2s ease;
+  color: var(--dark);
+}
+
+@keyframes slideUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to   { transform: translateY(0);    opacity: 1; }
+}
+
+.header {
+  background: var(--red);
+  padding: 12px 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 4px solid var(--red-dark);
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.title {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 11px;
+  color: white;
+  text-transform: capitalize;
+}
+
+.num {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.7);
+  margin-top: 4px;
+}
+
+.closeBtn {
+  background: var(--red-dark);
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  color: white;
+  width: 32px;
+  height: 32px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.1s;
+  flex-shrink: 0;
+}
+
+.closeBtn:hover {
+  background: #8b0000;
+}
+
+.body {
+  padding: 20px;
+}
+
+.imgSection {
+  text-align: center;
+  background: var(--cream-dark);
+  border: 2px solid #ddd;
+  padding: 16px;
+  margin-bottom: 16px;
+}
+
+.img {
+  width: 120px;
+  height: 120px;
+  image-rendering: pixelated;
+}
+
+.noImg {
+  width: 120px;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 28px;
+  color: #ccc;
+  margin: 0 auto;
+}
+
+.types {
+  display: flex;
+  gap: 6px;
+  justify-content: center;
+  margin-top: 8px;
+  flex-wrap: wrap;
+}
+
+.metaGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+
+.abilityList {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+.abilityTag {
+  background: var(--dark);
+  color: var(--cream);
+  padding: 3px 8px;
+  font-family: 'VT323', monospace;
+  font-size: 15px;
+  text-transform: capitalize;
+  border: 2px solid var(--blue);
+}
+
+.hidden {
+  color: var(--yellow);
+  font-size: 13px;
+}
+
+.favBtn {
+  width: 100%;
+  background: var(--yellow);
+  border: 3px solid var(--yellow-dark);
+  padding: 10px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: var(--dark);
+  cursor: pointer;
+  transition: transform 0.1s, background 0.15s;
+  margin-top: 16px;
+}
+
+.favBtn:hover {
+  transform: translateY(-2px);
+}
+
+.favBtnActive {
+  background: var(--red);
+  border-color: var(--red-dark);
+  color: white;
+}
+
+/* Scrollbar inside modal */
+.modal::-webkit-scrollbar { width: 6px; }
+.modal::-webkit-scrollbar-track { background: var(--cream-dark); }
+.modal::-webkit-scrollbar-thumb { background: var(--red); }
+
+@media (max-width: 520px) {
+  .modal { max-width: 100%; }
+  .title { font-size: 9px; }
+}

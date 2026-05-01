@@ -1,0 +1,108 @@
+.card {
+  background: #ffffff;
+  border: 3px solid var(--dark);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  box-shadow: var(--shadow);
+  position: relative;
+  overflow: hidden;
+  animation: fadeInCard 0.3s ease both;
+}
+
+@keyframes fadeInCard {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.card:hover {
+  transform: translate(-3px, -3px);
+  box-shadow: 7px 7px 0px rgba(0, 0, 0, 0.4);
+}
+
+.card:active {
+  transform: translate(0, 0);
+  box-shadow: var(--shadow);
+}
+
+.inner {
+  padding: 12px;
+  text-align: center;
+}
+
+.num {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 7px;
+  color: #aaa;
+  margin-bottom: 4px;
+}
+
+.imgWrap {
+  width: 96px;
+  height: 96px;
+  margin: 0 auto 8px;
+  background: var(--cream);
+  border: 2px solid var(--cream-dark);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.img {
+  width: 80px;
+  height: 80px;
+  image-rendering: pixelated;
+  transition: transform 0.2s;
+}
+
+.card:hover .img {
+  transform: scale(1.12) translateY(-4px);
+}
+
+.noImg {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  color: #ccc;
+}
+
+.name {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 9px;
+  color: var(--dark);
+  text-transform: capitalize;
+  margin-bottom: 6px;
+  line-height: 1.5;
+  min-height: 28px;
+}
+
+.types {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.favStar {
+  position: absolute;
+  top: 5px;
+  right: 6px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 2;
+  color: #ccc;
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.2));
+  transition: transform 0.15s, color 0.15s;
+  padding: 0;
+  line-height: 1;
+}
+
+.favStar:hover {
+  transform: scale(1.3);
+  color: var(--yellow);
+}
+
+.favActive {
+  color: var(--yellow);
+  filter: drop-shadow(1px 1px 0 rgba(0, 0, 0, 0.3));
+}
